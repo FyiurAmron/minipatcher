@@ -1,0 +1,12 @@
+# fix for OllyDbg's crash due to Armadillo protection
+# based on Flagmax's code from
+# http://forum.exetools.com/showthread.php?t=6507&page=2
+#^ OLLYDBG.EXE
+^*
+@00030947
+> E8 C0 FF 02 00
+< E9 0A E3 07 00
+@000AEC56
+> 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+< E8 B1 1C FB FF 60 8B C8 8B 7C 24 20 B8 25 00 00 00 F2 AE 83 F9 00 74 15 8B 7C 24 20 C7 07 45 78 70 6C C7 47 04 6F 69 74 00 C6 47 08 00 61 E9 C3 1C F8 FF 
+# done

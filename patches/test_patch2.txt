@@ -1,0 +1,9 @@
+: DEBUG ON
+# example patch file
+@1E
+> 70 61
+< 62 69
+@000000
+> 74 68 69 73
+< 74 69 74 73
+# done

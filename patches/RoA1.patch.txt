@@ -1,0 +1,19 @@
+# Realms of Arkania 1: Blade of Destiny patch pack
+^BLADEM.EXE
+# no XP loss on save outside of temple
+@ BCD0
+> 8B 5E 0A 33 D2 B8 39 00
+< 8B 5E 0A 33 D2 B8 00 00
+# always decrease negative attribute on levelup
+@4041C
+> 6A 14 9A 2F 00
+< 6A 00 9A 2F 00
+# always maximum (6) instead of 1-6 base LP (+2 for mage-ish classes in both cases) on levelup 
+@405E0
+< 89 46 FA
+> 89 4E FA
+# always maximum (8) instead of 3-8 AP in exchange for 10 spell increases on levelup
+@406BE
+< 6A 08 6A 03
+> 6A 08 6A 08
+# done
